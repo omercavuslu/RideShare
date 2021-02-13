@@ -1,5 +1,10 @@
 # RideShare
 
+IMPORTANT
+PosgreSql bağlantısı heroku üzerinden sağlanmıştır.
+Heroku üzerindeki credentials bilgileri periyodik olarak güncellenmektedir.
+Bu sebepten kaynaklı db bağlantı hatlarında omer.cavuslu@windowslive.com adresinden bana ulaşabilirsiniz.
+
 v1.0.0
 Api kullanımı için swagger dökümantasyonu eklendi.
 
