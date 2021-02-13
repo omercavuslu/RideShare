@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RideShare.DataAccess\RideShare.DataAccess.csproj" />
+    <ProjectReference Include="..\RideShare.Entity\RideShare.Entity.csproj" />
+    <ProjectReference Include="..\RideShare.ViewModel\RideShare.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>
