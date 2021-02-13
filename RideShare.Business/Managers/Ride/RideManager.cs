@@ -42,8 +42,15 @@ namespace RideShare.Business.Managers.Ride
 
         public bool Update(RideUpdateViewModel model)
         {
-            var mapped = MapToDataModel(model);
-            _repository.Update(mapped);
+            var updatedModel = GetById(model.id);
+            updatedModel.description = model.description;
+            updatedModel.Date = model.Date;
+            updatedModel.seat = model.seat;
+            updatedModel.to = model.to;
+            updatedModel.from = model.from;
+            updatedModel.isActive = model.isActive;
+            updatedModel.updateTime = DateTimeOffset.Now.ToUnixTimeSeconds();
+            _repository.Update(updatedModel);
             _unitOfWork.SaveChanges();
             return true;
         }
@@ -72,6 +79,7 @@ namespace RideShare.Business.Managers.Ride
         {
             return new RideDataModel()
             {
+
                 Date = model.Date,
                 from = model.from,
                 to = model.to,
